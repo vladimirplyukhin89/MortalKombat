@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2406eeb9-86bb-4fb7-8b0d-a9e9c4f7ee8b" name="Default Changelist" comment="" />
+    <list default="true" id="2406eeb9-86bb-4fb7-8b0d-a9e9c4f7ee8b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +21,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\remay\_IT\JSMarathon\MortalKombat" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -29,7 +39,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634035853274</updated>
-      <workItem from="1634035854918" duration="432000" />
+      <workItem from="1634035854918" duration="1231000" />
+      <workItem from="1634093550165" duration="156000" />
+      <workItem from="1634093711906" duration="185000" />
+      <workItem from="1634094606554" duration="3000" />
+      <workItem from="1634094818778" duration="36000" />
+      <workItem from="1634095502322" duration="364000" />
+      <workItem from="1634096623048" duration="366000" />
+      <workItem from="1634097028117" duration="735000" />
     </task>
     <servers />
   </component>
