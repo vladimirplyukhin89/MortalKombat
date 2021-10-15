@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2406eeb9-86bb-4fb7-8b0d-a9e9c4f7ee8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2406eeb9-86bb-4fb7-8b0d-a9e9c4f7ee8b" name="Default Changelist" comment="Attemp to remove red color" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,18 +10,35 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d6a9acfe-caed-461a-9996-d9cfc7df5430" />
+        <option name="url" value="https://github.com/vladimirplyukhin89/MortalKombat.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="1zP3N5wIDdJbyNJ9JlQbHBhJqm2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -46,11 +61,34 @@
       <workItem from="1634094818778" duration="36000" />
       <workItem from="1634095502322" duration="364000" />
       <workItem from="1634096623048" duration="366000" />
-      <workItem from="1634097028117" duration="735000" />
+      <workItem from="1634097028117" duration="4559000" />
+      <workItem from="1634104603305" duration="189000" />
+      <workItem from="1634104813953" duration="348000" />
+      <workItem from="1634176808269" duration="10828000" />
+      <workItem from="1634238963492" duration="9121000" />
     </task>
+    <task id="LOCAL-00001" summary="Attemp to remove red color">
+      <created>1634097835171</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1634097835171</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Attemp to remove red color">
+      <created>1634097889858</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634097889858</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Attemp to remove red color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attemp to remove red color" />
   </component>
 </project>
