@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2406eeb9-86bb-4fb7-8b0d-a9e9c4f7ee8b" name="Default Changelist" comment="Attemp to remove red color">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2406eeb9-86bb-4fb7-8b0d-a9e9c4f7ee8b" name="Default Changelist" comment="Attemp to remove red color" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +65,7 @@
       <workItem from="1634104603305" duration="189000" />
       <workItem from="1634104813953" duration="348000" />
       <workItem from="1634176808269" duration="10828000" />
-      <workItem from="1634238963492" duration="8785000" />
+      <workItem from="1634238963492" duration="9121000" />
     </task>
     <task id="LOCAL-00001" summary="Attemp to remove red color">
       <created>1634097835171</created>
