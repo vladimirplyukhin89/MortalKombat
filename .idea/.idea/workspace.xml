@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="9bc8b980-5710-43d5-9189-5391b8e82468" name="Changes" comment="" />
+=======
+    <list default="true" id="e0990fea-d883-49d5-a695-aace6363b7d9" name="Changes" comment="" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectId" id="1zRIgRV0xbFN4KSms5uLfAkEQPk" />
+=======
+  <component name="ProjectId" id="1zXRBGjEhkNBlumY40uqe6Rtal7" />
+>>>>>>> Stashed changes
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -16,12 +24,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< Updated upstream
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> Stashed changes
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
       <changelist id="9bc8b980-5710-43d5-9189-5391b8e82468" name="Changes" comment="" />
       <created>1634104584887</created>
       <option name="number" value="Default" />
@@ -29,6 +42,14 @@
       <updated>1634104584887</updated>
       <workItem from="1634104586367" duration="13000" />
       <workItem from="1634104795844" duration="16000" />
+=======
+      <changelist id="e0990fea-d883-49d5-a695-aace6363b7d9" name="Changes" comment="" />
+      <created>1634292309846</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634292309846</updated>
+      <workItem from="1634292310987" duration="15000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

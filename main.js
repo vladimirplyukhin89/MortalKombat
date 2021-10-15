@@ -16,6 +16,8 @@ const player2 = {
         console.log(this.name + ' Fight...');
     }
 }
+const $arenas = document.querySelector('.arenas');
+
 function createPlayer(playerName, player) {
      const $player1 = document.createElement('div');
      $player1.classList.add(playerName);
@@ -42,7 +44,6 @@ function createPlayer(playerName, player) {
      $character.appendChild($img);
 
      $player1.appendChild($character);
-     const $arenas = document.querySelector('.arenas');
      $arenas.appendChild($player1);
 }
 
