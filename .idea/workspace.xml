@@ -46,7 +46,22 @@
       <workItem from="1634094818778" duration="36000" />
       <workItem from="1634095502322" duration="364000" />
       <workItem from="1634096623048" duration="366000" />
+<<<<<<< Updated upstream
       <workItem from="1634097028117" duration="735000" />
+=======
+      <workItem from="1634097028117" duration="4559000" />
+      <workItem from="1634104603305" duration="189000" />
+      <workItem from="1634104813953" duration="348000" />
+      <workItem from="1634176808269" duration="10828000" />
+      <workItem from="1634238963492" duration="9685000" />
+    </task>
+    <task id="LOCAL-00001" summary="Attemp to remove red color">
+      <created>1634097835171</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1634097835171</updated>
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
