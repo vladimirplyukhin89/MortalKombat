@@ -1,5 +1,14 @@
 const $arenas = document.querySelector('.arenas');
-const $randomButton = document.querySelector('.button');
+// const $randomButton = document.querySelector('.button');
+const $formFight = document.querySelector('.control');
+
+const HIT = {   //
+    head: 30,
+    body: 25,
+    foot: 20,
+};
+
+const ATTACK = ['head', 'body', 'foot'];    // массив куда наносим удар
 
 const player1 = {
     player: 1,
@@ -12,7 +21,7 @@ const player1 = {
     },
     elHP,
     changeHP,
-    renderHP
+    renderHP,
 }
 const player2 = {
     player: 2,
@@ -25,7 +34,7 @@ const player2 = {
     },
     elHP,
     changeHP,
-    renderHP
+    renderHP,
 }
 function createElement(tag, className) {
     const $tag = document.createElement(tag);
@@ -72,17 +81,20 @@ function elHP() {
     return $playerLife;
 }
 function renderHP() {
-    const $outHP = this.elHP();
-    $outHP.style.width = this.hp + '%';
+    this.elHP().style.width = this.hp + '%';
 }
 
 function createReloadButton() {
-    const $reloadWrap = createElement('div', 'reloadWrap');
-    const $btn = createElement('button', 'button');
-    $btn.innerText = 'RESTART';
-    $reloadWrap.appendChild($btn);
+    const $reloadButtonDiv = createElement('div', 'reloadWrap');
+    const $reloadButton = createElement('button', 'button');
+    $reloadButton.innerText = 'RESTART';
 
-    return $reloadWrap;
+    $reloadButton.addEventListener('click', function () {
+        window.location.reload();
+    });
+
+    $reloadButtonDiv.appendChild($reloadButton);
+    $arenas.appendChild($reloadButtonDiv);
 }
 
 function playerWin(name) {
@@ -104,24 +116,76 @@ function getDraw() {
         ? $arenas.appendChild(playerWin(player1.name)) : $arenas.appendChild(playerWin(player2.name));
 }
 
-
-$randomButton.addEventListener('click', function () {
-    player1.changeHP(getRandomNumber(20));
-    player2.changeHP(getRandomNumber(20));
-    player1.renderHP();
-    player2.renderHP();
-    player1.elHP();
-    player2.elHP();
-    if(player1.hp === 0 || player2.hp === 0) {
-        $randomButton.disabled = true;
-        $arenas.appendChild(createReloadButton());
-        const $reloadBtn = document.querySelector('.reloadWrap .button');
-        $reloadBtn.addEventListener('click', function () {
-            window.location.reload();
-        })
-        return getWinner(player1, player2);
-    }
-})
+// $randomButton.addEventListener('click', function () {
+//     player1.changeHP(getRandomNumber(20));
+//     player2.changeHP(getRandomNumber(20));
+//     player1.renderHP();
+//     player2.renderHP();
+//     if(player1.hp === 0 || player2.hp === 0) {
+//         $randomButton.disabled = true;
+//         createReloadButton();
+//
+//         return getWinner(player1, player2);
+//     }
+// })
 
 $arenas.appendChild(createPlayer(player1));
 $arenas.appendChild(createPlayer(player2));
+
+/* удары противника. Возвращает объект в котором мы знаем
+на сколько ХП ударил соперник
+ */
+function enemyAttack() {
+    const hit = ATTACK[getRandomNumber(3) - 1]   // переменная для атаки
+    const defence = ATTACK[getRandomNumber(3) - 1]  // переменная для защиты
+    console.log('####: hit', hit);
+    console.log('####: defence', defence);
+
+    return {
+        value: getRandomNumber(HIT[hit]), // куда бьёт комп из объекта HIT
+        hit,
+        defence,
+    }
+
+}
+
+$formFight.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const enemy = enemyAttack();
+
+    // наш объект ударов из radio button
+    const attack = {};
+/*
+    Проходимся циклом по форме и если item(radio button) включен и равен hit(удары),
+    то записываем в объект значение value = выбранному значению
+ */
+    for(let item of $formFight) {
+        if(item.checked && item.name === 'hit') {
+            attack.value = getRandomNumber(HIT[item.value]);
+            attack.hit = item.value;
+        }
+        if(item.checked && item.name === 'defence') {
+            attack.defence = item.value;
+        }
+
+        item.checked = false;
+    }
+    if(attack.hit !== enemy.defence) {
+        player2.changeHP(attack.value);
+        player2.renderHP();
+    }
+    if(enemy.hit !== attack.defence) {
+        player1.changeHP(enemy.value);
+        player1.renderHP();
+    }
+
+    if(player1.hp === 0 || player2.hp === 0) {
+        createReloadButton();
+        // $reloadButton.disabled = true;
+
+       return getWinner(player1, player2);
+    }
+    console.log('####: мы', attack)
+    console.log('####: он', enemy)
+})
