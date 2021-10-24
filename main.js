@@ -159,13 +159,13 @@ function getDraw() {
  function getWinner(player, player) {
     if(player1.hp === 0 && player2.hp === 0) {
         $arenas.appendChild(getDraw());
-        showLastMessage('draw');
+        generateLogs('draw', player1, player2);
     } else if (player1.hp > 0) {
         $arenas.appendChild(playerWin(player1.name));
-        showLastMessage('end', player1, player2);
+        generateLogs('end', player1, player2);
     } else {
         $arenas.appendChild(playerWin(player2.name));
-        showLastMessage('end', player2, player1);
+        generateLogs('end', player2, player1);
     }
 }
 
@@ -248,22 +248,6 @@ function showFirstMessage(type) {
 // Вызовем нашу функцию чтобы сразу получить в чат сообщение о бое
 showFirstMessage('start');
 
-// Создаём функцию последнего сообщения в лог боя и добавляем её в getWinner
-function showLastMessage(type, player, player) {
-    let text, elem; // переменные для switch case
-    switch (type) {
-        case 'end':
-            text = logs[type][getRandomNumber(logs[type].length - 1)].replace('[playerWins]', player1.name).replace('[playerLose]', player2.name);
-            break;
-        case 'draw':
-            text = logs[type][0];
-            break;
-    }
-    elem = `<p>${text}</p>`;
-    $chat.insertAdjacentHTML('afterbegin', elem); //  к чату добавим нашу строку сразу после открывающегося тега p
-}
-
-// console.log(last('end', player, player));
 /*
  Cоздали функцию для логов с параметрами типа и двумя игроками.
   1й передаётся игрок, переданный в параметрах, бьёт; 2й передаётся игрок, переданный в параметрах, защищается
@@ -287,8 +271,12 @@ function generateLogs(type, player, player, value) {
             text = logs[type][getRandomNumber(len)].replace('[playerKick]', player1.name).replace('[playerDefence]', player2.name);
             elem = `<p>${getTime()} ${text}</p>`;
         case 'draw':
-            text = logs[type][0];
+            text = logs[type];
             elem = `${getTime()} ${text}`;
+            break;
+        case 'end':
+            text = logs[type][getRandomNumber(len)].replace('[playerWins]', player1.name).replace('[playerLose]', player2.name);
+            elem = `<p>${getTime()} ${text}</p>`;
             break;
     }
     $chat.insertAdjacentHTML('afterbegin', elem) // к чату добавим нашу строку сразу после открывающегося тега <p>
