@@ -248,22 +248,6 @@ function showFirstMessage(type) {
 // Вызовем нашу функцию чтобы сразу получить в чат сообщение о бое
 showFirstMessage('start');
 
-// Создаём функцию последнего сообщения в лог боя и добавляем её в getWinner
-// function showLastMessage(type, player, player) {
-//     let text, elem; // переменные для switch case
-//     switch (type) {
-//         case 'end':
-//             text = logs[type][getRandomNumber(logs[type].length - 1)].replace('[playerWins]', player1.name).replace('[playerLose]', player2.name);
-//             break;
-//         case 'draw':
-//             text = logs[type];
-//             break;
-//     }
-//     elem = `<p>${text}</p>`;
-//     $chat.insertAdjacentHTML('afterbegin', elem); //  к чату добавим нашу строку сразу после открывающегося тега p
-// }
-
-// console.log(last('end', player, player));
 /*
  Cоздали функцию для логов с параметрами типа и двумя игроками.
   1й передаётся игрок, переданный в параметрах, бьёт; 2й передаётся игрок, переданный в параметрах, защищается
