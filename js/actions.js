@@ -3,6 +3,7 @@ import { generateLogs } from './js.someLogs.js';
 import { $formFight } from './config.js';
 import { changeHP, elHP, renderHP } from './hp.js';
 
+// создаем функцию ничьи
 export const getDraw = () => {
     const $draw = createElement('div', 'loseTitle');
     $draw.innerText = 'FIGHT AGAIN';
@@ -10,6 +11,7 @@ export const getDraw = () => {
     return $draw;
 }
 
+// функция, которая выводит имя победителя на экран
 export const playerWin = (name) => {
     const $winTitle = createElement('div', 'loseTitle');
     $winTitle.innerText = `${name} wins`;
@@ -30,9 +32,9 @@ export const getWinner = (player1, player2) => {
         generateLogs('end', player2, player1);
     }
 }
-/*
-Добавляет функцию, которая показывает результат раунда
- */
+
+// Добавляем функцию, которая показывает результат раунда
+
 export const showRoundResult = (player1, player2) => {
     if(player1.hp === 0 || player2.hp === 0) {
         // создаём кнопку рестарта страницы
