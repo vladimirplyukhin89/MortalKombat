@@ -1,13 +1,13 @@
 import { getRandomNumber } from './utils.js';
 
-export const HIT = {   //
+// объект ??
+export const HIT = {
     head: 30,
     body: 25,
     foot: 20,
 };
 
 export const ATTACK = ['head', 'body', 'foot'];    // массив куда наносим удар
-
 
 /* удары противника. Возвращает объект в котором мы знаем
 на сколько ХП ударил соперник
@@ -27,9 +27,9 @@ export const enemyAttack = () => {
 // создаем нашу форму ввиде радио баттон с полями ударов и защиты
 export const $formFight = document.querySelector('.control');
 
-/*
-Аналогичная функция enemyAttack, где используем значения, выбранные из формы
- */
+
+// Аналогичная функция enemyAttack, где используем значения, выбранные из формы
+
 export const playerAttack = () => {
     // наш объект ударов из radio button
     const attack = {};

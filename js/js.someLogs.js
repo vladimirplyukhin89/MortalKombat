@@ -1,7 +1,8 @@
 import { getRandomNumber, getTime } from './utils.js';
+import { player1, player2 } from './players.js'
+
 // создаём чат
 export const $chat = document.querySelector('.chat');
-
 // переменная лога боя
 export const logs = {
     start: 'Часы показывали [time], когда [player1] и [player2] бросили вызов друг другу.',
@@ -46,8 +47,9 @@ export const logs = {
 /*
  Cоздали функцию для логов с параметрами типа и двумя игроками.
   1й передаётся игрок, переданный в параметрах, бьёт; 2й передаётся игрок, переданный в параметрах, защищается
+  В параметрах функции делаем 2 деструктуризации объектов player1 и player2
  */
-export const generateLogs = (type, player1, player2, value) => {
+export const generateLogs = (type, { name }, { name: playerName, hp }, value) => {
     const len = logs[type].length - 1; // переменная, кот. определяет длинну массива, кот. находится в значение объекта
     let text; // переменная для switch case;
     let elem; // для форматирования в строку и дальнейшим выводом на экран
@@ -56,21 +58,26 @@ export const generateLogs = (type, player1, player2, value) => {
     playerDefence на имя бьющего и защищающегося игрока.
     Так же взависимости от type подставляем значение из лога
      */
-    // let text = logs[type][getRandomNumber(logs[type].length) - 1].replace('[playerKick]', player1.name).replace('[playerDefence]', player2.name);
     switch(type) {
         case 'hit':
-            text = logs[type][getRandomNumber(len)].replace('[playerKick]', player2.name).replace('[playerDefence]',player1.name)
-            elem = `<p>${getTime()} ${text} -${value} [${player2.hp}/100]</p>`;
+            text = logs[type][getRandomNumber(len)]
+                .replace('[playerKick]', playerName)
+                .replace('[playerDefence]', name)
+            elem = `<p>${getTime()} ${text} -${value} [${hp}/100]</p>`; // [${hp}/100] - деструктуризация player2
             break;
         case 'defence':
-            text = logs[type][getRandomNumber(len)].replace('[playerKick]', player1.name).replace('[playerDefence]', player2.name);
+            text = logs[type][getRandomNumber(len)]
+                .replace('[playerKick]', name)
+                .replace('[playerDefence]', playerName);
             elem = `<p>${getTime()} ${text}</p>`;
         case 'draw':
             text = logs[type];
             elem = `${getTime()} ${text}`;
             break;
         case 'end':
-            text = logs[type][getRandomNumber(len)].replace('[playerWins]', player1.name).replace('[playerLose]', player2.name);
+            text = logs[type][getRandomNumber(len)]
+                .replace('[playerWins]', name)
+                .replace('[playerLose]', playerName);
             elem = `<p>${getTime()} ${text}</p>`;
             break;
     }
