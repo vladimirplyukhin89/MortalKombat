@@ -7,9 +7,7 @@ import { showRoundResult } from './actions.js';
 
 
 class Game {
-    constructor(props) {
-
-    }
+    // класс пока без конструктора
     // задаю метод showFirstMessage для вывода сообщения о начале игры в чата игры
     showFirstMessage = (type) => {
         const text = logs[type].replace('[time]', getTime())
