@@ -1,5 +1,5 @@
 import { getRandomNumber, getTime } from './utils.js';
-import { player1, player2 } from './players.js'
+// import { player1, player2 } from './players.js'
 
 // создаём чат
 export const $chat = document.querySelector('.chat');
@@ -59,21 +59,32 @@ export const generateLogs = (type, { name }, { name: playerName, hp }, value) =>
     Так же взависимости от type подставляем значение из лога
      */
     switch(type) {
+        // сообщения о начале игры, кот. выводится в чат игры
+        case 'start':
+            text = logs[type].replace('[time]', getTime())
+                .replace('[player1]', name)
+                .replace('[player2]', playerName);
+            elem = `<p>${text}</p>`;
+            break;
+        // сообщение о ударе, кот. выводится в чат игры
         case 'hit':
             text = logs[type][getRandomNumber(len)]
                 .replace('[playerKick]', playerName)
                 .replace('[playerDefence]', name)
             elem = `<p>${getTime()} ${text} -${value} [${hp}/100]</p>`; // [${hp}/100] - деструктуризация player2
             break;
+        // сообщение о защите, кот. выводится в чат игры
         case 'defence':
             text = logs[type][getRandomNumber(len)]
                 .replace('[playerKick]', name)
                 .replace('[playerDefence]', playerName);
             elem = `<p>${getTime()} ${text}</p>`;
+        // метод для ничьей, кот. выводится в чат игры
         case 'draw':
             text = logs[type];
             elem = `${getTime()} ${text}`;
             break;
+        // сообщение о ничьей, кот. выводится в чат игры
         case 'end':
             text = logs[type][getRandomNumber(len)]
                 .replace('[playerWins]', name)

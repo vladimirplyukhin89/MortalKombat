@@ -1,4 +1,4 @@
-import { createPlayer, createElement, createReloadButton, $arenas } from './create.js';
+import {  createElement, createReloadButton, $arenas } from './create.js';
 import { generateLogs } from './js.someLogs.js';
 import { $formFight } from './config.js';
 import { changeHP, elHP, renderHP } from './hp.js';
