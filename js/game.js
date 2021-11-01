@@ -1,21 +1,13 @@
 import { logs, generateLogs, $chat } from './js.someLogs.js';
 import { getRandomNumber, getTime } from './utils.js';
 import { createPlayer, createElement, $arenas } from './create.js';
-import { player1, player2 } from './players.js';
+// import { player1, player2 } from './players.js';
 import { $formFight, enemyAttack, playerAttack } from './config.js';
 import { showRoundResult } from './actions.js';
 
 
 class Game {
     // класс пока без конструктора
-    // задаю метод showFirstMessage для вывода сообщения о начале игры в чата игры
-    showFirstMessage = (type) => {
-        const text = logs[type].replace('[time]', getTime())
-            .replace('[player1]', player1.name)
-            .replace('[player2]', player2.name);
-        const elem = `<p>${text}</p>` // создаем строку
-        $chat.insertAdjacentHTML('afterbegin', elem);
-    }
 
     // задаю метод start нашего класса для старта игры
     start = () => {
@@ -56,4 +48,4 @@ class Game {
     }
 }
 
-export const game = new Game();
+// export const game = new Game();
