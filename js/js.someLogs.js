@@ -58,7 +58,7 @@ export const generateLogs = (type, { name }, { name: playerName, hp }, value) =>
     playerDefence на имя бьющего и защищающегося игрока.
     Так же взависимости от type подставляем значение из лога
      */
-    switch(type) {
+    switch (type) {
         // сообщения о начале игры, кот. выводится в чат игры
         case 'start':
             text = logs[type].replace('[time]', getTime())
@@ -72,6 +72,7 @@ export const generateLogs = (type, { name }, { name: playerName, hp }, value) =>
                 .replace('[playerKick]', playerName)
                 .replace('[playerDefence]', name)
             elem = `<p>${getTime()} ${text} -${value} [${hp}/100]</p>`; // [${hp}/100] - деструктуризация player2
+
             break;
         // сообщение о защите, кот. выводится в чат игры
         case 'defence':
