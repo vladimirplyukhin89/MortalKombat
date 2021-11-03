@@ -186,6 +186,11 @@ body {
     font-family: Arial;
 }
 
+.fightgif {
+    position: absolute;
+    bottom: 12vh;
+    right: 7vh;
+}
 
 .character {
     position: absolute;

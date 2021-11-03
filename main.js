@@ -28,13 +28,17 @@ class Game {
         body.autoplay = true;
         return body;
     }
-    // Гифка Fight
-    //getWordFight = () => {
-    //    const img = createElement('img', 'fightWord');
-    //    img.src = 'assets/fight.gif';
-    //    console.log(typeof img);
-    //    return $arenas.appendChild(img);
-    //}
+
+    getGifFight = () => {
+        const img = createElement('img', 'fightgif');
+        img.src = 'assets/fight.gif';
+        const $h = document.querySelector('h2');
+        $h.appendChild(img);
+
+        setTimeout(() => {
+            img.style.display = 'none';
+        }, 1000)
+    }
 
     // запрос для выбора нашего персонажа
     getPlayer = async () => {
@@ -151,7 +155,7 @@ class Game {
         })
         this.getAudioWord();
         this.fight();
-        //this.getWordFight();
+        this.getGifFight();
     }
 }
 
