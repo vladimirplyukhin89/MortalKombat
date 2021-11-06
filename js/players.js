@@ -1,12 +1,10 @@
-import { createElement, $arenas} from './create.js'
+import { createElement, $arenas } from './create.js'
 
 export default class Player {
     constructor(props) {
-        // console.log(props);
 
         this.player = props.player;
         this.name = props.name;
-        // this.weapon = props.weapon;
         this.hp = props.hp;
         this.img = props.img;
 
@@ -18,7 +16,7 @@ export default class Player {
 
     changeHP = (value) => {
         this.hp -= value;
-        if(this.hp <= 0) this.hp = 0;
+        if (this.hp <= 0) this.hp = 0;
     }
 
     elHP = () => {
@@ -33,7 +31,7 @@ export default class Player {
 
     createPlayer = (playerObj) => {
         // сделаем деструктуризацию входного объекта
-        const {name, img, hp, player} = playerObj;
+        const { name, img, hp, player } = playerObj;
         // создаем див, куда будем добавлять значения из входного объекта
         const $player1 = createElement('div', `player${player}`); // номер игрока
         const $progressbar = createElement('div', 'progressbar');
