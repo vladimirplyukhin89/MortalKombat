@@ -1,5 +1,4 @@
 import { getRandomNumber, getTime } from './utils.js';
-// import { player1, player2 } from './players.js'
 
 // создаём чат
 export const $chat = document.querySelector('.chat');

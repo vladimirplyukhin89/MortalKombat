@@ -1,7 +1,6 @@
-import {  createElement, createReloadButton, $arenas } from './create.js';
+import { createElement, createReloadButton, $arenas } from './create.js';
 import { generateLogs } from './js.someLogs.js';
 import { $formFight } from './config.js';
-import { changeHP, elHP, renderHP } from './hp.js';
 
 // создаем функцию ничьи
 export const getDraw = () => {
@@ -21,7 +20,7 @@ export const playerWin = (name) => {
 
 // Функцию, кот. сравнивает ХП игроков и выводит победителя на экран и в лог боя
 export const getWinner = (player1, player2) => {
-    if(player1.hp === 0 && player2.hp === 0) {
+    if (player1.hp === 0 && player2.hp === 0) {
         $arenas.appendChild(getDraw());
         generateLogs('draw', player1, player2);
     } else if (player1.hp > 0) {
@@ -36,7 +35,7 @@ export const getWinner = (player1, player2) => {
 // Добавляем функцию, которая показывает результат раунда
 
 export const showRoundResult = (player1, player2) => {
-    if(player1.hp === 0 || player2.hp === 0) {
+    if (player1.hp === 0 || player2.hp === 0) {
         // создаём кнопку рестарта страницы
         createReloadButton();
 

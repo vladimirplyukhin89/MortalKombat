@@ -1,5 +1,6 @@
 const $parent = document.querySelector('.parent');
 const $player = document.querySelector('.player');
+const $enemyPlayer = document.querySelector('.enemy__player');
 
 const createElement = (tag, className) => {
     const $tag = document.createElement(tag);
@@ -33,10 +34,14 @@ async function init() {
     let imgSrc = null;
     createEmptyPlayerBlock();
 
+    let imgSrcEnemy = null;
+
 
     players.forEach(item => {
         const el = createElement('div', ['character', `div${item.id}`]);
         const img = createElement('img');
+        console.log(el);
+        console.log(img);
 
         el.addEventListener('mousemove', () => {
             if (imgSrc === null) {
@@ -64,8 +69,6 @@ async function init() {
             el.classList.add('active');
 
             setTimeout(() => {
-                // TODO: Здесь должен быть код который перенаправит вас на ваше игровое поле...
-                //  Пример использования: window.location.pathname = 'arenas.html';
                 window.location.pathname = 'arenas.html';
             }, 500);
         });

@@ -1,6 +1,5 @@
 import { getRandomNumber } from './utils.js';
 
-// объект ??
 export const HIT = {
     head: 30,
     body: 25,
@@ -37,12 +36,12 @@ export const playerAttack = () => {
         Проходимся циклом по форме и если item(radio button) включен и равен hit(удары),
         то записываем в объект значение value = выбранному значению
      */
-    for(let item of $formFight) {
-        if(item.checked && item.name === 'hit') {
+    for (let item of $formFight) {
+        if (item.checked && item.name === 'hit') {
             attack.value = getRandomNumber(HIT[item.value]);
             attack.hit = item.value;
         }
-        if(item.checked && item.name === 'defence') {
+        if (item.checked && item.name === 'defence') {
             attack.defence = item.value;
         }
 
