@@ -1,3 +1,4 @@
+let fighters = true;
 const $parent = document.querySelector('.parent');
 const $player = document.querySelector('.player');
 const $enemyPlayer = document.querySelector('.enemy__player');
@@ -34,7 +35,7 @@ async function init() {
     let imgSrc = null;
     createEmptyPlayerBlock();
 
-    let imgSrcEnemy = null;
+    //let imgSrcEnemy = null;
 
 
     players.forEach(item => {
@@ -44,7 +45,7 @@ async function init() {
         console.log(img);
 
         el.addEventListener('mousemove', () => {
-            if (imgSrc === null) {
+            if (imgSrc === null && fighters === true) {
                 imgSrc = item.img;
                 const $img = createElement('img');
                 $img.src = imgSrc;
@@ -53,7 +54,7 @@ async function init() {
         });
 
         el.addEventListener('mouseout', () => {
-            if (imgSrc) {
+            if (imgSrc && fighters === true) {
                 imgSrc = null;
                 $player.innerHTML = '';
             }
@@ -65,12 +66,54 @@ async function init() {
             // то мы должны ее распарсить обратным методом JSON.parse(localStorage.getItem('player1'));
             // но это уже будет в нашем классе Game когда мы инициализируем игроков.
             localStorage.setItem('player1', JSON.stringify(item));
+            localStorage.setItem('player2', JSON.stringify(item));
+
 
             el.classList.add('active');
+            fighters = false;
+            $parent.style.pointerEvents = 'none';
+
+            // функция инициализации противника
+            async function initEnemy() {
+                localStorage.removeItem('player2');
+
+                const players = await fetch('https://reactmarathon-api.herokuapp.com/api/mk/players').then(res => res.json());
+
+                //let imgSrc = null;
+                createEmptyPlayerBlock();
+                let imgSrcEnemy = null;
+
+                players.forEach(item => {
+                    const el = createElement('div', ['character', `div${item.id}`]);
+                    const img = createElement('img');
+                    console.log(el);
+                    console.log(img);
+
+                    el.addEventListener('mousemove', () => {
+                        if (imgSrcEnemy === null && fighters === true) {
+                            imgSrcEnemy = item.img;
+                            const $img = createElement('img');
+                            $img.src = imgSrcEnemy;
+                            $enemyPlayer.appendChild($img);
+                        }
+                    });
+
+                    el.addEventListener('mouseout', () => {
+                        if (imgSrcEnemy && fighters === true) {
+                            imgSrcEnemy = null;
+                            $enemyPlayer.innerHTML = '';
+                        }
+                    });
+                })
+
+            }
+            setInterval(() => {
+                initEnemy();
+            }, 1000);
 
             setTimeout(() => {
                 window.location.pathname = 'arenas.html';
-            }, 500);
+            }, 4500);
         });
 
         img.src = item.avatar;
