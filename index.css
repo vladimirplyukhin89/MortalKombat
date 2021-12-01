@@ -146,6 +146,7 @@ body {
     position: absolute;
     border: 14px solid #21aa21;
 }
+
 .character.disabled {
     cursor: default;
 }
