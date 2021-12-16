@@ -74,6 +74,7 @@ class Game {
         const player = await this.getPlayer();
         const enemyPlayer = await this.getEnemyPlayer();
         let p1 = JSON.parse(localStorage.getItem('player1'));
+        //let p2 = JSON.parse(localStorage.getItem('player2'));
         let p2 = enemyPlayer;
         /*
         дождёмся ответа от нашего сервера чтобы после в переменной вывести на страницу выбор нашего игрока
