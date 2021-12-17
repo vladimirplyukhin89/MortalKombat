@@ -33,7 +33,8 @@ body {
 }
 
 .title {
-    position: absolute;
+    display: contents;
+    /*position: absolute;*/
     font-family: "Mortal Kombat 3";
     font-size: 48px;
     color: #FFF;
