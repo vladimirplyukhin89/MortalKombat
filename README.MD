@@ -1,5 +1,5 @@
 # Simple analog of Mortal Kombat 3 SEGA Edition on vanilla JavaScript
+You can check it out 'https://eloquent-darwin-7a8769.netlify.app'
 <p text-align="center">
-<video src="./assets/video/promo.mp4"> 
-</video>
+<img src="./assets/mk_promo.png" width="400" title="Mortal Kombat promo">
 </p>
